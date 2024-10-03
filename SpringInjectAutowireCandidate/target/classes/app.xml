@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="a" class="com.app.Address" autowire-candidate="false">
+		<property name="city" value="Pune"/>
+		<property name="state" value="MH"/>
+	</bean>
+	
+	<bean id="a1" class="com.app.Address">
+		<property name="city" value="Banglore"/>
+		<property name="state" value="KA"/>
+	</bean>
+	
+	<bean id="e" class="com.app.Employee" autowire="byType">
+		<property name="id" value="1"/>
+		<property name="name" value="sam"/>
+		<property name="sal" value="1000"/>
+		
+	</bean>
+</beans>
